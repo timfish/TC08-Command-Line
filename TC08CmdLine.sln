@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pico.Device.TC08", "Pico.Device.TC08\Pico.Device.TC08.csproj", "{D4AA59D6-DED3-46E8-9007-A9ECCDB67259}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TC08CmdLine", "TC08CmdLine\TC08CmdLine.csproj", "{D71570DE-1455-453F-B10B-F7202F8F81A9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{CE2D7CCC-8E56-4557-85BD-07B0C9CC4148}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4AA59D6-DED3-46E8-9007-A9ECCDB67259}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4AA59D6-DED3-46E8-9007-A9ECCDB67259}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4AA59D6-DED3-46E8-9007-A9ECCDB67259}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4AA59D6-DED3-46E8-9007-A9ECCDB67259}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D71570DE-1455-453F-B10B-F7202F8F81A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71570DE-1455-453F-B10B-F7202F8F81A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71570DE-1455-453F-B10B-F7202F8F81A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71570DE-1455-453F-B10B-F7202F8F81A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
