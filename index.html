@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="TC08 Command Line : Fetch thermocouple temperatures from the command line" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>TC08 Command Line</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/timfish/TC08-Command-Line">View on GitHub</a>
+
+          <h1 id="project_title">TC08 Command Line</h1>
+          <h2 id="project_tagline">Fetch thermocouple temperatures from the command line</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/timfish/TC08-Command-Line/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/timfish/TC08-Command-Line/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="pico-usb-tc08-command-line-" class="anchor" href="#pico-usb-tc08-command-line-"><span class="octicon octicon-link"></span></a>Pico USB TC08 Command Line </h1>
+
+<p>A simple command line application to fetch data from the Pico Technology USB TC08 thermocouple data logger, without having to dig into the SDK.
+It requires .NET 4.0 and the driver dll is embedded within so there are no other files required. You may have to install PicoLog so that the kernel driver is installed.</p>
+
+<p>It has some sensible defaults and a help command so you can get temperatures quickly with no knowledge of the driver API. You can also redirect the output to a file (&gt;) and log the results continuously.</p>
+
+<p>Check out some examples:</p>
+
+<p><strong>Default: Channel 1, J type and degC, single result</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe
+&gt; 20.13
+</code></pre>
+
+<p><strong>Channel 2</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe -c 2
+&gt; 18.13
+</code></pre>
+
+<p><strong>Channel 2, K type</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe -c 2 -t K
+&gt; 18.13
+</code></pre>
+
+<p><strong>Channel 4 and 7 as J and K</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe -t ---j--k-
+&gt; 18.13, 20.75
+</code></pre>
+
+<p><strong>List devices</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe -d
+&gt; QJY22/387
+</code></pre>
+
+<p><strong>Device QJY22/387 Channel 4 and 7 as J and K</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe -s QJY22/387 -t ---j--k-
+&gt; 18.13, 20.75
+</code></pre>
+
+<p><strong>Log all 8 channels to CSV file until stopped (includes a header row!)</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe –l -t jjjjjjjj &gt; output.csv
+</code></pre>
+
+<p><strong>Help</strong></p>
+
+<pre><code>&gt; TC08CmdLine.exe -?
+&gt; TC08 Command line application
+&gt; &lt;command&gt; [-Log|-L] [-Serial|-S] [-Type|-T] [-Channel|-C] [-RejFreq|-R]
+&gt;           [-Unit|-U]
+&gt; 
+&gt; 
+&gt; [-Log|-L]         Switch to continuous logging mode. Loops until closed.
+&gt; [-Devices|-D]     List devices.
+&gt; [-Serial|-S]      Serial number. Default is first device found.
+&gt; [-Type|-T]        Type or types of thermocouple. Default is 'J'. For multiple
+&gt;                   thermocouples use '-' to denote disabled channels. For
+&gt;                   example '---j--k-' would set channels 4 and 7 to J and K
+&gt;                   types respectively.
+&gt; [-Channel|-C]     Channel number. Default is 1. Ignored when specifying
+&gt;                   multiple channel types.
+&gt; [-RejFreq|-R]     Mains rejection frequency. Default is 50
+&gt; [-Unit|-U]        Temperature units C/F/K. Default is C (centigrade).
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">TC08 Command Line maintained by <a href="https://github.com/timfish">timfish</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
